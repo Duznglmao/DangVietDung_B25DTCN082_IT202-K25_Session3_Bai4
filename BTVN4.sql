@@ -45,8 +45,8 @@ VALUES
     ('Trần Thị B', '2023-05-20', 300000, 'Canceled'),
     ('Lê Văn C', '2024-01-05', 850000, 'Completed');
 
-INSERT INTO ORDERS_BackUp (orderID, customerName, orderDate, totalAmount, status, isDeleted)
-SELECT orderID, customerName, orderDate, totalAmount, status, isDeleted
+INSERT INTO ORDERS_BackUp (orderID, customerName, orderDate, totalAmount, status)
+SELECT orderID, customerName, orderDate, totalAmount, status
 FROM ORDERS
 WHERE status = 'Canceled';
 
